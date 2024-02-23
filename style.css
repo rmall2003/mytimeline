@@ -1,4 +1,122 @@
-.line{
-    border-left: 30px solid green;
-    height: 100%;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
+body{
+    background: #B7C9F2;
+}
+.timeline{
+    position: relative;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+.container{
+    padding: 10px 20px;
+    position: relative;
+    width: 50%;
+    height: fit-content;
+}
+.text-box{
+    padding: 20px 30px;
+    background: #fff;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+}
+.left-container{
+    padding: 10px 15px;
+    left: 0;
+}
+.right-container{
+    left: 50%;
+}
+img{
+    width: 50px;
+    height: 60px;
+    position: relative;
+    bottom: 80px;
+    right: 30px;
+    float: right;
+}
+.esy{
+    height: 80px;
+}
+img:hover{
+    transform: scale(2);
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+.timeline::after{
+    content:'';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #fff;
+    top: 0;
+    left: 50%;
+    margin-left:0px;
+    z-index: -1;
+}
+.text-box h2{
+    font-weight: 600;
+}
+.text-box small{
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.left-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fff;
+    right: -15px;
+}
+.right-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #fff;
+    left: -15px;
+}
+@media screen and (max-width: 600px) {
+    .timeline{
+        margin: 50px auto;
+    }
+    .timeline::after{
+        left: 31px;
+    }
+    .container{
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+    .text-box{
+        font-size: 13px;
+    }
+    .text-box small{
+        margin-bottom: 10px;
+    }
+    .left-container{
+        padding: 10px 52px;
+    }
+    .right-container{
+        padding: 10px 52px;
+        left: 0;
+    }
+    .left-container-arrow, .right-container-arrow{
+        border-right: 15px solid #fff;
+        border-left: 0;
+        left: -15px;
+    }
+}
+
